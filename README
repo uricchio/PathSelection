@@ -1,0 +1,12 @@
+The scripts in this directory were used to run the selection strength analyses in Visher et al 2021 (bioRxiv).
+
+The manuscript is available here: https://www.biorxiv.org/content/10.1101/2021.10.11.463986v1
+
+make_input.sh generates the input files that are needed for the MCMC analysis.
+
+run_MCMC.sh runs the MCMC analysis. We used software by Schraiber et al (https://github.com/ekirving/selection) to perform this estimation.
+
+run_plot_sel.sh and run_comparison.sh summarize the output data from the MCMC for plots.
+
+Feel free to direct any questions about these analyses to Lawrence.Uricchio@tufts.edu. For questions about the data or the paper in general
+please contact the corresponding authors on the manuscript linked above.
