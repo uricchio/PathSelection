@@ -13,7 +13,7 @@ init1 = sys.argv[6]
 
 typ = sys.argv[7]
 
-if g1 == "5.0" and (init1 == "200" or init1 == "50"):
+if g1 == "5.0" and (init1 == "35"):
     exit()
 
 # first file

@@ -44,9 +44,17 @@ plot_traj<-function(pos,samp,pass) {
 
   trajObs<-cbind(trajObs,r=rep(1000,length(trajObs$V1)))
  
-  pl<-ggplot(df,aes(time,traj,group=r))+geom_line(alpha=0.3)+xlab("time")+ylab("allele frequency")
+  pl<-ggplot(df,aes(time,traj,group=r))+geom_line(alpha=0.3,col='gray')+xlab("time")+ylab("allele frequency")
   pl<-pl+geom_point(data=trajObs,aes(V3,V1/V2,group=r),col='red')
 
   return(pl)
 
 }
+
+plA<-plot_traj(89033,9,3)
+plB<-plot_traj(89033,9,2)
+plC<-plot_traj(89033,9,1)
+
+
+plot_grid(plA,plB,plC,labels=c("A","B","C"),ncol=3)
+ggsave("~/projects/elisa/scriptsWSensTest/Figures/FigS5.png",width=9,height=2.5)
